@@ -209,9 +209,9 @@ class TeacherController extends Controller
         }
     }
 
-    function list(){
-        return Teacher::all();
-    }
+    // function list(){
+    //     return Teacher::all();
+    // }
 
 
 

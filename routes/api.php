@@ -2,7 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\TeacherAPIController;
+use App\Http\Controllers\LoginAPIController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('List', [TeacherController::class, 'List']);
+Route::get('List', [TeacherAPIController::class, 'List']);
+Route::post('add',[TeacherAPIController::class,'add']);
+
+Route::post('/login',[LoginAPIController::class,'login']); 
+Route::post('/logout',[LoginAPIController::class,'logout']); 

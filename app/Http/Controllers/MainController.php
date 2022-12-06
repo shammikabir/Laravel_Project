@@ -26,7 +26,7 @@ class MainController extends Controller
         $admin = new Admin;
         $admin->name = $request->name;
         $admin->email = $request->email;
-        $admin->password = Hash::make($request->password);
+        $admin->password = ($request->password);
         $save = $admin->save();
 
         if($save){

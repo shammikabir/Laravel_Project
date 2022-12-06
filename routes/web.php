@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\TeacherAPIController;
+
+use App\Http\Controllers\LoginAPIController;
 use App\Http\Controllers\StudentController;
 use App\Http\Middleware\AuthCheck;
 use App\Http\Middleware\TeacherCheck;
